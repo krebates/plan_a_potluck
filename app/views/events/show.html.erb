@@ -1,0 +1,13 @@
+
+
+<%= event.event_name %><br/>
+  <%= event.street_address %><br/>
+  <%= event.city %><br/>
+  <%= event.state %><br/>
+  <%= event.zip_code %><br/>
+  <%= event.phone_number %><br/>
+
+<%= link_to "Delete information", product_path(@product), data: { confirm: "Are you sure?" }, method: :delete %>
+  <%= link_to "Edit information", edit_product_path(@product) %>
+  <%= link_to "Show store", edit_product_path(@product) %><br/><br/>
+  <hr>

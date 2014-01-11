@@ -1,0 +1,22 @@
+<%= link_to "Create categories for your event", new_category_path %> <br/> <hr>
+
+
+  <% @events.each do |event| %>
+  <%= event.event_name %><br/>
+  <%= event.street_address %><br/>
+  <%= event.city %><br/>
+  <%= event.state %><br/>
+  <%= event.zip_code %><br/>
+  <%= event.phone_number %><br/>
+  <%= link_to "Delete information", event_path(event), data: { confirm: "Are you sure?" }, method: :delete %>
+
+  <p> HERE ARE SOME CATEGORIES </p>
+
+  <% event.categories.each do |category| %>
+  <%= event.category.name %><br/>
+  <%= link_to "Delete information", category_path(category), data: { confirm: "Are you sure?" }, method: :delete %>
+    <% end %>
+  <br/><hr><hr>
+
+  <% end %>
+

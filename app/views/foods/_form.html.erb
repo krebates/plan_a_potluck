@@ -1,0 +1,10 @@
+<h1>Sign Up to bring a food item!</h1>
+<hr>
+
+<%= simple_form_for @food do |f| %>
+  <%= f.input :name %>
+  <%= f.input :comments %>
+ <%= f.association :category, prompt: "Choose a Category" %>
+ <%= f.submit 'Add Food Item' %>
+ <% end %>
+<hr>

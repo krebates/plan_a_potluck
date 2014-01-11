@@ -1,0 +1,13 @@
+<%= link_to "Add another category", new_category_path%><br/><br/>
+
+<%= link_to "See events", events_path %> <br/> <hr>
+
+
+<% @categories.each do |category| %>
+<%= category.name%><br/><br/>
+<%= link_to "Add food for this category", new_food_path %><br/>
+
+<%= link_to "Delete information", category_path(category), data: { confirm: "Are you sure?" }, method: :delete %>
+
+  <br/><hr>
+<% end %>

@@ -1,0 +1,16 @@
+<%= link_to "Bring more food!", new_food_path %> <br/> <hr>
+
+
+  <% @food.each do |food| %>
+  <%= food.name %><br/>
+  <%= food.comment %><br/>
+  <%= category.food if category.food%><br/><br/>
+
+
+<%= link_to "Delete information", food_path(food), data: { confirm: "Are you sure?" }, method: :delete %>
+
+  <br/><hr><hr>
+
+
+
+<% end %>
