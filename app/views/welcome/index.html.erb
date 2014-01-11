@@ -1,6 +1,3 @@
-<%= link_to "Create an Event!", new_event_path%><br/>
-
-<%= link_to "See Events", '/events' %> <br/> <hr>
 <!-- Requires Foundation 4 | visit http://foundation.zurb.com to download -->
 
 <!-- Nav and Banner -->
@@ -8,16 +5,32 @@
   <div class="row">
     <div class="large-12 columns">
       <ul class="button-group">
-        <li><a href="#" class="button">Link 1</a></li>
-        <li><a href="#" class="button">Link 2</a></li>
-        <li><a href="#" class="button">Link 3</a></li>
-        <li><a href="#" class="button">Link 4</a></li>
-        <li><a href="#" class="button">Link 5</a></li>
-        <li><a href="#" class="button">Link 6</a></li>
-        <li><a href="#" class="button">Link 7</a></li>
+        <li><a href="/events" class="button">See Events</a></li>
+        <li><a href="/events/new" class="button">Create an Event</a></li>
       </ul>
 
       <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
+
+      <ul class="example-orbit" data-orbit>
+  <li>
+    <img src="http://www.sherastrology.com/wp-content/uploads/2011/02/potluck1.jpg" />
+    <div class="orbit-caption">
+      Enjoy time with friends instead of planning.
+    </div>
+  </li>
+  <li>
+    <img src="http://tastefoodblog.files.wordpress.com/2011/11/chicken-pesto.jpg" />
+    <div class="orbit-caption">
+      Bring your favorite dish and make sure no one else brings the same item.
+    </div>
+  </li>
+  <li>
+    <img src="http://thestarvingartistfood.files.wordpress.com/2012/10/photo-90.jpg" />
+    <div class="orbit-caption">
+      Plan the best party.
+    </div>
+  </li>
+</ul>
       <p><img src="http://www.sherastrology.com/wp-content/uploads/2011/02/potluck1.jpg" /></p>
     </div>
   </div>
@@ -64,20 +77,6 @@
     <div class="large-12 columns">
       <hr />
       <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
-            <li><a href="#">Link 6</a></li>
-            <li><a href="#">Link 7</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </footer>
