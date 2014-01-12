@@ -1,5 +1,6 @@
 <%= link_to "Bring more food!", new_event_category_food_path %> <br/> <hr>
 <h1> Event: <%= @event.event_name %> </h1>
+
 <h2> Category: <%= @category.name %> </h2>
   <% @foods.each do |food| %>
   <h4><%= food.name %><br/></h4>
