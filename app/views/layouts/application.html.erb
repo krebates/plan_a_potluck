@@ -9,6 +9,32 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+    <nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'Plan A Potluck', root_path %></a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">Set Up a Party</a>
+        <ul class="dropdown">
+          <li><a href="/events" class="has-dropdown">See Events</a></li>
+        <li><a href="/events/new" class="has-dropdown">Create an Event</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+    </ul>
+  </section>
+</nav>
   </head>
 
   <body>

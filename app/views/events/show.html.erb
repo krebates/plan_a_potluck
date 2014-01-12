@@ -1,13 +1,20 @@
 
+<h1>Link to this Event: <%= request.original_url %></h1>
+<%= @event.event_name %><br/>
+<%= @event.street_address %><br/>
+<%= @event.city %><br/>
+<%= @event.state %><br/>
+<%= @event.zip_code %><br/>
+<%= @event.phone_number %><br/>
 
-<%= event.event_name %><br/>
-  <%= event.street_address %><br/>
-  <%= event.city %><br/>
-  <%= event.state %><br/>
-  <%= event.zip_code %><br/>
-  <%= event.phone_number %><br/>
+<% if @event.categories.any? %>
+  <% @event.categories.each do |category| %>
+    <%= link_to category.name, event_category_path(@event, category) %>
+  <% end %>
+<% end %>
 
-<%= link_to "Delete information", product_path(@product), data: { confirm: "Are you sure?" }, method: :delete %>
-  <%= link_to "Edit information", edit_product_path(@product) %>
-  <%= link_to "Show store", edit_product_path(@product) %><br/><br/>
+<%= link_to "Delete information", event_path(@event), data: { confirm: "Are you sure?" }, method: :delete %>
+  <%= link_to "Edit information", edit_event_path(@event) %>
+<%= link_to "Add Categories", new_event_category_path(@event) %>
+
   <hr>

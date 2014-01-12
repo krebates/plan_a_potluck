@@ -5,11 +5,16 @@ PotluckApp2::Application.routes.draw do
 
   resources :users
 
-  resources :events, :has_many => :categories, :has_many => :foods
+  resources :events do
+    resources :categories, except: :index do
+      resources :foods
+    end
+  end
 
-  resources :categories
+  # events_path
+  # event_categories_path(event)
+  # event_category_foods_path(event, category)
 
-  resources :foods
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

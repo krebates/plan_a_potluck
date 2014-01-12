@@ -1,10 +1,13 @@
 <h1>Sign Up to bring a food item!</h1>
 <hr>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= simple_form_for  [@event, @category, @food] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :comments %>
+       <%= f.submit 'Add Food Item' %>
+       <% end %>
+       </div>
+    </div>
 
-<%= simple_form_for @food do |f| %>
-  <%= f.input :name %>
-  <%= f.input :comments %>
- <%= f.association :category, prompt: "Choose a Category" %>
- <%= f.submit 'Add Food Item' %>
- <% end %>
 <hr>

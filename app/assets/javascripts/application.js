@@ -13,7 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+$(document).foundation({
+  orbit: {
+    animation: 'slide',
+    timer_speed: 10000,
+    pause_on_hover: true,
+    animation_speed: 600,
+    navigation_arrows: true,
+    bullets: false
+  }
+});
+

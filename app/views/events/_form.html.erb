@@ -5,7 +5,7 @@
   <%= f.input :event_name %>
   <%= f.input :street_address %>
   <%= f.input :city %>
-  <%= f.input :state, collection: [ "AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]%>
+  <%= f.input :state, collection: Event.states %>
   <%= f.input :zip_code %>
   <%= f.input :phone_number %>
   <%= f.submit 'Add Event' %>

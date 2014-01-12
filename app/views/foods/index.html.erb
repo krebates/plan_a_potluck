@@ -1,13 +1,10 @@
-<%= link_to "Bring more food!", new_food_path %> <br/> <hr>
-
-
-  <% @food.each do |food| %>
-  <%= food.name %><br/>
-  <%= food.comment %><br/>
-  <%= category.food if category.food%><br/><br/>
-
-
-<%= link_to "Delete information", food_path(food), data: { confirm: "Are you sure?" }, method: :delete %>
+<%= link_to "Bring more food!", new_event_category_food_path %> <br/> <hr>
+<h1> Event: <%= @event.event_name %> </h1>
+<h2> Category: <%= @category.name %> </h2>
+  <% @foods.each do |food| %>
+  <h4><%= food.name %><br/></h4>
+  <h5><%= food.comments %><br/></h5>
+    <%= link_to "Delete information", event_category_food_path(@event, @category, food), data: { confirm: "Are you sure?" }, method: :delete %>
 
   <br/><hr><hr>
 

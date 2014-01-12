@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Food Item</th>
+    <th>Preparer</th>
+  </tr>
+<% @current_foods.each do |food| %>
+  <tr>
+    <td><%= link_to food.name, event_category_food_path(@event, @category, food) %></td>
+    <td><%= food.user %></td>
+  </tr>
+<% end %>
+</table>
+
