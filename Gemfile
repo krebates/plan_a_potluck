@@ -30,6 +30,8 @@ gem 'foundation-rails'
 
 gem 'carrierwave'
 
+gem 'newrelic_rpm'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
